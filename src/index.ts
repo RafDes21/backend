@@ -1,7 +1,7 @@
 import "../envConfig";
 import express from "express";
 import cors from "cors";
-import route from "./routes/clientes.routes";
+import route from "./routes/clients.routes";
 import dbConfig from "./bd/config";
 
 const PORT = process.env.PORT || 8080;
