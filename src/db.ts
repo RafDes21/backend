@@ -1,15 +1,14 @@
 import mongoose from "mongoose";
+import config from "./config";
 
-const mongoUrl = process.env.MONGO_URL || "";
-
-async function main() {
+const connectDB = () => {
   try {
     mongoose.set("strictQuery", false);
-    mongoose.connect(mongoUrl);
+    mongoose.connect(config.mongoURI);
     console.log("connect mongo");
   } catch (error) {
     console.log(error);
   }
-}
+};
 
-export default main;
+export default connectDB;

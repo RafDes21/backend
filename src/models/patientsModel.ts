@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
-const clientCollection = "client";
+const patientsCollection = "patients";
 
-const clientSchema = new mongoose.Schema({
+const patientsSchema = new mongoose.Schema({
   name: { type: String, required: true, max: 100 },
   document: { type: String, required: true },
   address: { type: String, required: true, max: 100 },
@@ -10,4 +10,4 @@ const clientSchema = new mongoose.Schema({
   date: { type: Date, default: Date.now },
 });
 
-export const Client = mongoose.model(clientCollection, clientSchema);
+export const Patients = mongoose.model(patientsCollection, patientsSchema);
