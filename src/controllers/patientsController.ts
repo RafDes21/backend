@@ -21,6 +21,10 @@ export const getPatientsById = async (req: Request, res: Response) => {
 };
 
 export const updatePatients = async (req: Request, res: Response) => {
+  console.log(req.body);
+  console.log(req.params);
+  
+  
   try {
     const { id } = req.params;
     const { name, document, address, phone } = req.body;

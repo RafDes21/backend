@@ -11,7 +11,7 @@ const router = Router();
 
 router.get("/", getPatients);
 router.get("/:id", getPatientsById);
-router.put("./:id", updatePatients);
+router.put("/:id", updatePatients);
 router.delete("/patients", deletePatients);
 router.post("/", createPatients)
 
