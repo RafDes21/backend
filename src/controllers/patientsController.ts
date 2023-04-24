@@ -48,3 +48,17 @@ export const deletePatients = async (req: Request, res: Response) => {
       .json({ message: "has occurred while deleting the patient" });
   }
 };
+
+export const createPatients = async (req: Request, res: Response) => {
+  try {
+    const client = req.body;
+    const newClient = new Patients(client);
+    await newClient.save();
+    res.send(200);
+  } catch (error) {
+    console.error(error);
+    res
+      .status(500)
+      .json({ message: "error to create a patient" });
+  }
+};
