@@ -4,15 +4,13 @@ import {
   getPatientsById,
   updatePatients,
   deletePatients,
-  createPatients
 } from "../controllers/patientsController";
 
-const router = Router();
+const route = Router();
 
-router.get("/", getPatients);
-router.get("/:id", getPatientsById);
-router.put("/:id", updatePatients);
-router.delete("/patients", deletePatients);
-router.post("/", createPatients)
+route.get("/", getPatients);
+route.get("/:id", getPatientsById);
+route.put("./:id", updatePatients);
+route.delete("/", deletePatients);
 
-export default router;
+export default route;
