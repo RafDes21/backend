@@ -21,10 +21,7 @@ export const getPatientsById = async (req: Request, res: Response) => {
 };
 
 export const updatePatients = async (req: Request, res: Response) => {
-  console.log(req.params.id);
-  console.log(req.body);
-  
-  
+   
   try {
     const { id } = req.params;
     const { name, document, address, phone } = req.body;
@@ -55,6 +52,7 @@ export const deletePatients = async (req: Request, res: Response) => {
 };
 
 export const createPatients = async (req: Request, res: Response) => {
+  console.log(req.body);
   try {
     const client = req.body;
     const newClient = new Patients(client);
