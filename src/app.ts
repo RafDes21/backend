@@ -6,7 +6,7 @@ import bodyParser from "body-parser";
 const app = express();
 
 app.use(cors({
-    origin: '*'
+    origin: 'https://gestions-iota.vercel.app'
 }));
 app.use(bodyParser.json());
 app.use(express.json());
